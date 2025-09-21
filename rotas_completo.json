@@ -1,0 +1,1064 @@
+[
+    {
+        "roteiros":"Centro cultural do Curiau-afroturismo",
+        "municipio":"Macapa",
+        "uf":"AP",
+        "contato":null,
+        "id":1,
+        "x":-51.072,
+        "y":0.0249
+    },
+    {
+        "roteiros":"Comunidade Quilombola Lagoa da Pedra .",
+        "municipio":"Arraias",
+        "uf":"TO",
+        "contato":null,
+        "id":2,
+        "x":-47.0011,
+        "y":-13.00
+    },
+    {
+        "roteiros":"Comunidade Quilombola de Campo Alegre",
+        "municipio":"Parana",
+        "uf":"TO",
+        "contato":null,
+        "id":3,
+        "x":-48.0,
+        "y":-13.0
+    },
+    {
+        "roteiros":"Comunidades Quilombolas de Cururupu",
+        "municipio":"Cururupu",
+        "uf":"MA",
+        "contato":null,
+        "id":4,
+        "x":-44.8314,
+        "y":-1.8026
+    },
+    {
+        "roteiros":"Rota Turistica dos Lencois Maranhenses.",
+        "municipio":"Santo Amaro do Maranhao",
+        "uf":"MA",
+        "contato":null,
+        "id":5,
+        "x":-43.2539,
+        "y":-2.4983
+    },
+    {
+        "roteiros":"Roteiro do Quilombo Cultural ( bairro Liberdade)",
+        "municipio":"Sao Luis",
+        "uf":"MA",
+        "contato":null,
+        "id":6,
+        "x":-44.2694,
+        "y":-2.634
+    },
+    {
+        "roteiros":"Roteiro Quilombo",
+        "municipio":"Fortaleza",
+        "uf":"CE",
+        "contato":null,
+        "id":7,
+        "x":-38.5304,
+        "y":-3.7908
+    },
+    {
+        "roteiros":"Projeto Ampliando Horizontes",
+        "municipio":"Horizonte",
+        "uf":"CE",
+        "contato":null,
+        "id":8,
+        "x":-38.4817,
+        "y":-4.0998
+    },
+    {
+        "roteiros":"Museu Quilombola Gideo Veio",
+        "municipio":"Acari",
+        "uf":"RN",
+        "contato":null,
+        "id":9,
+        "x":-36.6395,
+        "y":-6.4372
+    },
+    {
+        "roteiros":"Rota dos Quilombos",
+        "municipio":"Portalegre",
+        "uf":"RN",
+        "contato":null,
+        "id":10,
+        "x":-37.9876,
+        "y":-6.0279
+    },
+    {
+        "roteiros":"Rota Patrimonios Vivos da Capital do Forro",
+        "municipio":"Caruaru",
+        "uf":"PE",
+        "contato":null,
+        "id":11,
+        "x":-35.9971,
+        "y":-8.2761
+    },
+    {
+        "roteiros":"Olha Recife!",
+        "municipio":"Recife",
+        "uf":"PE",
+        "contato":null,
+        "id":12,
+        "x":-34.9124,
+        "y":-8.0876
+    },
+    {
+        "roteiros":"Rotas Quilombolas",
+        "municipio":"Triunfo",
+        "uf":"PE",
+        "contato":null,
+        "id":13,
+        "x":-38.0576,
+        "y":-7.8502
+    },
+    {
+        "roteiros":"Cidades do Reconcavo Baiano",
+        "municipio":"Cachoeira",
+        "uf":"BA",
+        "contato":null,
+        "id":14,
+        "x":-39.0,
+        "y":-13.0
+    },
+    {
+        "roteiros":"Projeto Vozes Negras",
+        "municipio":"Camacari",
+        "uf":"BA",
+        "contato":"@associacaoegbe_culturalsenzala",
+        "id":15,
+        "x":-38.3251,
+        "y":-12.7
+    },
+    {
+        "roteiros":"Costa dos Coqueiros",
+        "municipio":"Lauro de Freitas",
+        "uf":"BA",
+        "contato":null,
+        "id":16,
+        "x":-38.1615,
+        "y":-12.7464
+    },
+    {
+        "roteiros":"Rotas do Garimpo",
+        "municipio":"Mucuge",
+        "uf":"BA",
+        "contato":null,
+        "id":17,
+        "x":-41.4781,
+        "y":-13.0835
+    },
+    {
+        "roteiros":"Rota do Territorio de Identidade do Baixo Sul com Nazare das Farinhas.",
+        "municipio":"Nazare",
+        "uf":"BA",
+        "contato":null,
+        "id":18,
+        "x":-39.0,
+        "y":-13.0
+    },
+    {
+        "roteiros":"Rota da Bacia do Iguape",
+        "municipio":"Salinas da Margarida",
+        "uf":"BA",
+        "contato":null,
+        "id":19,
+        "x":-39.0,
+        "y":-13.0
+    },
+    {
+        "roteiros":"Role Afro  11",
+        "municipio":"Salvador",
+        "uf":"BA",
+        "contato":null,
+        "id":20,
+        "x":-39.0,
+        "y":-13.0
+    },
+    {
+        "roteiros":"Consciencia Negra",
+        "municipio":"Sao Francisco do Conde",
+        "uf":"BA",
+        "contato":null,
+        "id":21,
+        "x":-39.0,
+        "y":-13.0
+    },
+    {
+        "roteiros":"Rota do Cangaço",
+        "municipio":"Sobradinho",
+        "uf":"BA",
+        "contato":null,
+        "id":22,
+        "x":-40.8018,
+        "y":-9.4705
+    },
+    {
+        "roteiros":"Caminhos do sertão: rota da Caatinga com suas especificidades.",
+        "municipio":"Tucano",
+        "uf":"BA",
+        "contato":null,
+        "id":23,
+        "x":-39.0,
+        "y":-11.0
+    },
+    {
+        "roteiros":"Rota de Vera Cruz e Itaparica",
+        "municipio":"Vera Cruz",
+        "uf":"BA",
+        "contato":null,
+        "id":24,
+        "x":-39.0,
+        "y":-13.0
+    },
+    {
+        "roteiros":"Encrespa Barbacena",
+        "municipio":"Barbacena",
+        "uf":"MG",
+        "contato":null,
+        "id":25,
+        "x":-44.0,
+        "y":-21.0
+    },
+    {
+        "roteiros":"Comunidades Quilombolas de Chapada do Norte",
+        "municipio":"Chapada do Norte",
+        "uf":"MG",
+        "contato":null,
+        "id":26,
+        "x":-42.4946,
+        "y":-17.101
+    },
+    {
+        "roteiros":"Cemiterio dos Escravos",
+        "municipio":"Diamantina",
+        "uf":"MG",
+        "contato":null,
+        "id":27,
+        "x":-43.7126,
+        "y":-18.1634
+    },
+    {
+        "roteiros":"Festival Fala Quilombo",
+        "municipio":"Itabira",
+        "uf":"MG",
+        "contato":null,
+        "id":28,
+        "x":-43.2535,
+        "y":-19.6469
+    },
+    {
+        "roteiros":"Comunidades Quilombolas de Minas Novas",
+        "municipio":"Minas Novas",
+        "uf":"MG",
+        "contato":null,
+        "id":29,
+        "x":-42.3981,
+        "y":-17.3268
+    },
+    {
+        "roteiros":"Coletivo Palma Preta de Ouro Preto",
+        "municipio":"Ouro Preto",
+        "uf":"MG",
+        "contato":null,
+        "id":30,
+        "x":-43.6679,
+        "y":-20.3519
+    },
+    {
+        "roteiros":"Rota negra em Cariacica",
+        "municipio":"Cariacica",
+        "uf":"ES",
+        "contato":null,
+        "id":31,
+        "x":-40.4307,
+        "y":-20.2963
+    },
+    {
+        "roteiros":"Rota Negra em Sao Mateus",
+        "municipio":"Sao Mateus",
+        "uf":"ES",
+        "contato":null,
+        "id":32,
+        "x":-39.8377,
+        "y":-18.7323
+    },
+    {
+        "roteiros":"As Festividades do Rosario",
+        "municipio":"Vitoria",
+        "uf":"ES",
+        "contato":null,
+        "id":33,
+        "x":-40.3136,
+        "y":-20.2871
+    },
+    {
+        "roteiros":"Caminhos Coloniais (Boa Esperança)",
+        "municipio":"Areal",
+        "uf":"RJ",
+        "contato":null,
+        "id":34,
+        "x":-43.1143,
+        "y":-22.2286
+    },
+    {
+        "roteiros":"Atrativos  turisticos de Duque de Caxias",
+        "municipio":"Duque de Caxias",
+        "uf":"RJ",
+        "contato":null,
+        "id":35,
+        "x":-43.2786,
+        "y":-22.6679
+    },
+    {
+        "roteiros":"Feira Literaria Afro de Mage",
+        "municipio":"Mage",
+        "uf":"RJ",
+        "contato":null,
+        "id":36,
+        "x":-43.1204,
+        "y":-22.6497
+    },
+    {
+        "roteiros":"Águas do Noroeste (Cruzeirinho)",
+        "municipio":"Natividade",
+        "uf":"RJ",
+        "contato":null,
+        "id":37,
+        "x":-41.9782,
+        "y":-21.0438
+    },
+    {
+        "roteiros":"Festival Caminhos da Negritude",
+        "municipio":"Nilopolis",
+        "uf":"RJ",
+        "contato":null,
+        "id":38,
+        "x":-43.4306,
+        "y":-22.8151
+    },
+    {
+        "roteiros":"Costa Verde",
+        "municipio":"Paraty",
+        "uf":"RJ",
+        "contato":null,
+        "id":39,
+        "x":-45.0,
+        "y":-23.0
+    },
+    {
+        "roteiros":"Serra Verde Imperial (Tapera)",
+        "municipio":"Petropolis",
+        "uf":"RJ",
+        "contato":null,
+        "id":40,
+        "x":-43.17,
+        "y":-22.4176
+    },
+    {
+        "roteiros":"Regioes turisticas de Agulhas Negras (Santana),",
+        "municipio":"Quatis",
+        "uf":"RJ",
+        "contato":null,
+        "id":41,
+        "x":-44.1934,
+        "y":-22.2791
+    },
+    {
+        "roteiros":"Roteiro Pequena África",
+        "municipio":"Rio de Janeiro",
+        "uf":"RJ",
+        "contato":null,
+        "id":42,
+        "x":-43.4087,
+        "y":-22.9659
+    },
+    {
+        "roteiros":"Vale do Cafe (Sao Jose do Pinheiro, Sao Jose da Serra e Alto da Serra)",
+        "municipio":"Vassouras",
+        "uf":"RJ",
+        "contato":null,
+        "id":43,
+        "x":-43.6058,
+        "y":-22.3693
+    },
+    {
+        "roteiros":"Roteiro Afro Campineiro",
+        "municipio":"Campinas",
+        "uf":"SP",
+        "contato":null,
+        "id":44,
+        "x":-47.0,
+        "y":-23.0
+    },
+    {
+        "roteiros":"Kizomba-Festa da Raca",
+        "municipio":"Diadema",
+        "uf":"SP",
+        "contato":null,
+        "id":45,
+        "x":-47.0,
+        "y":-24.0
+    },
+    {
+        "roteiros":"Monumento aos Abolicionistas",
+        "municipio":"Jacarei",
+        "uf":"SP",
+        "contato":null,
+        "id":46,
+        "x":-46.0,
+        "y":-23.0
+    },
+    {
+        "roteiros":"Consciencia Negra",
+        "municipio":"Ribeirao Preto",
+        "uf":"SP",
+        "contato":null,
+        "id":47,
+        "x":-48.0,
+        "y":-21.0
+    },
+    {
+        "roteiros":"Roteiro Negro e Indigena",
+        "municipio":"Santos",
+        "uf":"SP",
+        "contato":null,
+        "id":48,
+        "x":-46.3455,
+        "y":-23.927
+    },
+    {
+        "roteiros":"AfroTour",
+        "municipio":"Sao Jose do Rio Preto",
+        "uf":"SP",
+        "contato":null,
+        "id":49,
+        "x":-49.0,
+        "y":-21.0
+    },
+    {
+        "roteiros":"Roteiro Afro - Sao Paulo",
+        "municipio":"Sao Paulo",
+        "uf":"SP",
+        "contato":null,
+        "id":50,
+        "x":-47.0,
+        "y":-24.0
+    },
+    {
+        "roteiros":"Casa da Cultura Afro-Brasileira - Memorial ao Escravizado",
+        "municipio":"Sao Vicente",
+        "uf":"SP",
+        "contato":null,
+        "id":51,
+        "x":-46.4769,
+        "y":-23.9684
+    },
+    {
+        "roteiros":"AFROFEST ? Festival de Cultura Negra",
+        "municipio":"Tupa",
+        "uf":"SP",
+        "contato":null,
+        "id":52,
+        "x":-51.0,
+        "y":-22.0
+    },
+    {
+        "roteiros":"Linha AfroBloco",
+        "municipio":"Curitiba",
+        "uf":"PR",
+        "contato":null,
+        "id":53,
+        "x":-49.0,
+        "y":-25.0
+    },
+    {
+        "roteiros":"MOSTRA AFRO-BRASILEIRA PALMARES",
+        "municipio":"Londrina",
+        "uf":"PR",
+        "contato":null,
+        "id":54,
+        "x":-51.0,
+        "y":-24.0
+    },
+    {
+        "roteiros":"Virada Afrocultural de Itajaí",
+        "municipio":"Itajai",
+        "uf":"SC",
+        "contato":null,
+        "id":55,
+        "x":-49.0,
+        "y":-27.0
+    },
+    {
+        "roteiros":"Rota Encontros Rurais",
+        "municipio":"Quilombo",
+        "uf":"SC",
+        "contato":null,
+        "id":56,
+        "x":-53.0,
+        "y":-27.0
+    },
+    {
+        "roteiros":"Consciência Negra",
+        "municipio":"Cachoeirinha",
+        "uf":"RS",
+        "contato":null,
+        "id":57,
+        "x":-51.0958,
+        "y":-29.9425
+    },
+    {
+        "roteiros":"Feira Municipal de Afroempreendedorismo",
+        "municipio":"Caxias do Sul",
+        "uf":"RS",
+        "contato":null,
+        "id":58,
+        "x":-51.1873,
+        "y":-29.1648
+    },
+    {
+        "roteiros":"Associação Quilombola Acácio Flores",
+        "municipio":"Dona Francisca",
+        "uf":"RS",
+        "contato":null,
+        "id":59,
+        "x":-53.0,
+        "y":-30.0
+    },
+    {
+        "roteiros":"Atrativos  turísticos de Passo Fundo",
+        "municipio":"Passo Fundo",
+        "uf":"RS",
+        "contato":null,
+        "id":60,
+        "x":-52.0,
+        "y":-28.0
+    },
+    {
+        "roteiros":"Territórios Negros Afrobrasileiros em Porto Alegre",
+        "municipio":"Porto Alegre",
+        "uf":"RS",
+        "contato":null,
+        "id":61,
+        "x":-51.1971,
+        "y":-30.0578
+    },
+    {
+        "roteiros":"Rota Turística Municipal com visita a comunidade Quilombola",
+        "municipio":"Campo Grande",
+        "uf":"MS",
+        "contato":null,
+        "id":62,
+        "x":-54.0,
+        "y":-21.0
+    },
+    {
+        "roteiros":"Comunidade Quilombola Furnas do Dionisio",
+        "municipio":"Jaraguari",
+        "uf":"MS",
+        "contato":"@quilombo.furnas.dionisio",
+        "id":63,
+        "x":-54.414,
+        "y":-20.1239
+    },
+    {
+        "roteiros":"Festas do Congo",
+        "municipio":"Vila Bela da Santissima Trindade",
+        "uf":"MT",
+        "contato":null,
+        "id":64,
+        "x":-60.0,
+        "y":-15.0
+    },
+    {
+        "roteiros":"Quilombo Urbano Vila Delfiore",
+        "municipio":"Aparecida de Goiania",
+        "uf":"GO",
+        "contato":null,
+        "id":65,
+        "x":-49.2451,
+        "y":-16.8084
+    },
+    {
+        "roteiros":"Quilombo Mesquita - Festival Latinidades",
+        "municipio":"Cidade Ocidental",
+        "uf":"GO",
+        "contato":null,
+        "id":66,
+        "x":-47.8864,
+        "y":-16.0835
+    },
+    {
+        "roteiros":"Festival Latinidades",
+        "municipio":"Brasilia",
+        "uf":"DF",
+        "contato":null,
+        "id":67,
+        "x":-47.8958,
+        "y":-15.7869
+    },
+    {
+        "roteiros":"Comunidade Campinho",
+        "municipio":"Paraty",
+        "uf":"RJ",
+        "contato":null,
+        "id":68,
+        "x":-44.6811,
+        "y":-23.0281
+    },
+    {
+        "roteiros":"Comunidade Tatagema",
+        "municipio":"Oriximina",
+        "uf":"PA",
+        "contato":null,
+        "id":69,
+        "x":-55.8529,
+        "y":-1.7627
+    },
+    {
+        "roteiros":"Comunidade Palmares",
+        "municipio":"União dos Palmares",
+        "uf":"AL",
+        "contato":null,
+        "id":70,
+        "x":-36.0325,
+        "y":-9.1689
+    },
+    {
+        "roteiros":"Comunidade Kalunga",
+        "municipio":"Cavalcante",
+        "uf":"GO",
+        "contato":null,
+        "id":71,
+        "x":-47.6833,
+        "y":-13.7333
+    },
+    {
+        "roteiros":"Comunidade Remanso",
+        "municipio":"Lencois",
+        "uf":"BA",
+        "contato":null,
+        "id":72,
+        "x":-41.3844,
+        "y":-12.5641
+    },
+    {
+        "roteiros":"Comunidade Sao Jose da Serra",
+        "municipio":"Valenca",
+        "uf":"RJ",
+        "contato":null,
+        "id":73,
+        "x":-43.8351,
+        "y":-22.2331
+    },
+    {
+        "roteiros":"Rota Costa Verde",
+        "municipio":"Angra dos Reis",
+        "uf":"RJ",
+        "contato":null,
+        "id":74,
+        "x":-44.75,
+        "y":-23.0167
+    },
+    {
+        "roteiros":"Comunidade Ivaporunduva",
+        "municipio":"Eldorado",
+        "uf":"SP",
+        "contato":null,
+        "id":75,
+        "x":-48.65,
+        "y":-24.9333
+    },
+    {
+        "roteiros":"Favela do Vidigal",
+        "municipio":"Rio de Janeiro",
+        "uf":"RJ",
+        "contato":null,
+        "id":76,
+        "x":-43.4,
+        "y":-23.0
+    },
+    {
+        "roteiros":"Catu dos Eleotérios",
+        "municipio":"Canguaretama",
+        "uf":"RN",
+        "contato":"@katu_experiencias",
+        "id":77,
+        "x":-35.1232,
+        "y":-6.3712
+    },
+    {
+        "roteiros":"Quilombo Mumbuca",
+        "municipio":"Mateiros",
+        "uf":"TO",
+        "contato":null,
+        "id":78,
+        "x":-46.9667,
+        "y":-10.5833
+    },
+    {
+        "roteiros":"Quilombo Furnas dos Baianos",
+        "municipio":"Aquidauna",
+        "uf":"MS",
+        "contato":null,
+        "id":79,
+        "x":-55.7774,
+        "y":-20.4577
+    },
+    {
+        "roteiros":"Quilombo Filipa",
+        "municipio":"Itapecuru Mirim",
+        "uf":"MA",
+        "contato":null,
+        "id":80,
+        "x":-44.6,
+        "y":-3.55
+    },
+    {
+        "roteiros":"Quilombo Andre Lopes",
+        "municipio":"Eldorado",
+        "uf":"SP",
+        "contato":null,
+        "id":81,
+        "x":-48.1833,
+        "y":-24.8833
+    },
+    {
+        "roteiros":"Santiago do Iguape - Rota da Liberdade",
+        "municipio":"Cachoeira",
+        "uf":"BA",
+        "contato":"@turismo_rotadaliberdade",
+        "id":82,
+        "x":-38.858,
+        "y":-12.6852
+    },
+    {
+        "roteiros":"Kaonge - Rota da Liberdade",
+        "municipio":"Cachoeira",
+        "uf":"BA",
+        "contato":"@turismo_rotadaliberdade",
+        "id":83,
+        "x":-38.8457,
+        "y":-12.6492
+    },
+    {
+        "roteiros":"Templos Religiosos de Candomblé (Rotas Setur Bahia)",
+        "municipio":"Salvador",
+        "uf":"BA",
+        "contato":"@seturbahia",
+        "id":84,
+        "x":-38.4953,
+        "y":-12.9984
+    },
+    {
+        "roteiros":"Bairro do Cabula",
+        "municipio":"Salvador",
+        "uf":"BA",
+        "contato":null,
+        "id":85,
+        "x":-38.4597,
+        "y":-12.9527
+    },
+    {
+        "roteiros":"roteiros Afro Salvador",
+        "municipio":"Salvador",
+        "uf":"BA",
+        "contato":null,
+        "id":86,
+        "x":-38.5141,
+        "y":-12.9729
+    },
+    {
+        "roteiros":"roteiros Afro Salvador",
+        "municipio":"Salvador",
+        "uf":"BA",
+        "contato":null,
+        "id":87,
+        "x":-38.5045,
+        "y":-12.9821
+    },
+    {
+        "roteiros":"Pelourinho",
+        "municipio":"Salvador",
+        "uf":"BA",
+        "contato":null,
+        "id":88,
+        "x":-38.5096,
+        "y":-12.9738
+    },
+    {
+        "roteiros":"Parque de São Bartolomeu",
+        "municipio":"Salvador",
+        "uf":"BA",
+        "contato":null,
+        "id":89,
+        "x":-38.4723,
+        "y":-12.8996
+    },
+    {
+        "roteiros":"Centro Cultural Quilombo Quingoma",
+        "municipio":"Lauro de Freitas",
+        "uf":"BA",
+        "contato":"@quingomaquilombo",
+        "id":90,
+        "x":-38.3225,
+        "y":-12.858
+    },
+    {
+        "roteiros":"Evento Consciência Negra",
+        "municipio":"São Francisco do Conde",
+        "uf":"BA",
+        "contato":null,
+        "id":91,
+        "x":-38.68,
+        "y":-12.6251
+    },
+    {
+        "roteiros":"Acupe (Nêgo Fugido)",
+        "municipio":"Santo Amaro",
+        "uf":"BA",
+        "contato":null,
+        "id":92,
+        "x":-38.7487,
+        "y":-12.6619
+    },
+    {
+        "roteiros":"Encrespa Barbacena",
+        "municipio":"Barbacena",
+        "uf":"MG",
+        "contato":null,
+        "id":93,
+        "x":-43.7676,
+        "y":-21.2124
+    },
+    {
+        "roteiros":"Rota Experências do Brasil Original",
+        "municipio":"São José do Divino",
+        "uf":"MG",
+        "contato":null,
+        "id":94,
+        "x":-41.9047,
+        "y":-3.7794
+    },
+    {
+        "roteiros":"Evento Seminário Igualdade Racial",
+        "municipio":"Uberlândia",
+        "uf":"MG",
+        "contato":null,
+        "id":95,
+        "x":-48.2668,
+        "y":-18.9208
+    },
+    {
+        "roteiros":"Comunidade Quilombola de São Tomé do Aporema",
+        "municipio":"Tartugalzinho",
+        "uf":"AP",
+        "contato":null,
+        "id":96,
+        "x":-50.9092,
+        "y":1.4985
+    },
+    {
+        "roteiros":"Rotas Negras",
+        "municipio":"Macapa",
+        "uf":"AP",
+        "contato":null,
+        "id":97,
+        "x":-51.0482,
+        "y":0.0545
+    },
+    {
+        "roteiros":"Rotas Quilombolas",
+        "municipio":"Garanhuns",
+        "uf":"PE",
+        "contato":null,
+        "id":98,
+        "x":-36.4757,
+        "y":-8.8863
+    },
+    {
+        "roteiros":"Rota Quilombola",
+        "municipio":"São José de Princesas",
+        "uf":"PB",
+        "contato":null,
+        "id":99,
+        "x":-38.1009,
+        "y":-7.7425
+    },
+    {
+        "roteiros":"Terreiro das Filomenas",
+        "municipio":"Acari",
+        "uf":"RN",
+        "contato":null,
+        "id":100,
+        "x":-36.6391,
+        "y":-6.4322
+    },
+    {
+        "roteiros":"Rota dos Lençois Maranhenses",
+        "municipio":"Barreirinha",
+        "uf":"MA",
+        "contato":null,
+        "id":101,
+        "x":-42.8293,
+        "y":-2.7731
+    },
+    {
+        "roteiros":"Caminho Ancestral São Luis",
+        "municipio":"São Luis",
+        "uf":"Maranhão",
+        "contato":null,
+        "id":102,
+        "x":-44.2801,
+        "y":-2.6593
+    },
+    {
+        "roteiros":"Quilombo Urbano Memorial Zumbi",
+        "municipio":"Fortaleza",
+        "uf":"CE",
+        "contato":null,
+        "id":103,
+        "x":-38.5002,
+        "y":-3.7392
+    },
+    {
+        "roteiros":"Projeto OGBON MIMO  Sabedoria Sagrada",
+        "municipio":"Brasília",
+        "uf":"DF",
+        "contato":null,
+        "id":104,
+        "x":-47.8744,
+        "y":-15.8004
+    },
+    {
+        "roteiros":"Comunidades Quilombolas do Vale do Guapore",
+        "municipio":"Costa Marques",
+        "uf":"RO",
+        "contato":null,
+        "id":105,
+        "x":-64.424,
+        "y":-12.4175
+    },
+    {
+        "roteiros":"Rotas Quilombolas do Baixo Sul",
+        "municipio":"Nilo Peçanha",
+        "uf":"BA",
+        "contato":null,
+        "id":106,
+        "x":-38.9773,
+        "y":-13.6593
+    },
+    {
+        "roteiros":"Rotas Quilombolas do Baixo Sul",
+        "municipio":"Ituberá",
+        "uf":"BA",
+        "contato":null,
+        "id":107,
+        "x":-39.1481,
+        "y":-13.7364
+    },
+    {
+        "roteiros":"Rotas Quilombolas do Baixo Sul",
+        "municipio":"Aratuípe",
+        "uf":"BA",
+        "contato":null,
+        "id":108,
+        "x":-39.0009,
+        "y":-13.0782
+    },
+    {
+        "roteiros":"Rotas Quilombolas do Vale do Iguape e Recôncavo",
+        "municipio":"Maragogipe",
+        "uf":"BA",
+        "contato":null,
+        "id":109,
+        "x":-38.8465,
+        "y":-12.8578
+    },
+    {
+        "roteiros":"Rotas de Itaparica e Vera Cruz",
+        "municipio":"Itaparica",
+        "uf":"BA",
+        "contato":null,
+        "id":110,
+        "x":-38.6211,
+        "y":-12.9288
+    },
+    {
+        "roteiros":"Rotas da Baia de Todos os Santos",
+        "municipio":"Salvador",
+        "uf":"BA",
+        "contato":null,
+        "id":111,
+        "x":-38.5092,
+        "y":-12.9231
+    },
+    {
+        "roteiros":"Rotas Quilombolas Caminhos do Sertão",
+        "municipio":"Santa Terezinha",
+        "uf":"BA",
+        "contato":null,
+        "id":112,
+        "x":-39.5736,
+        "y":-12.7488
+    },
+    {
+        "roteiros":"Rotas Caminhos do Sertão",
+        "municipio":"Monte Santo",
+        "uf":"BA",
+        "contato":null,
+        "id":113,
+        "x":-39.3302,
+        "y":-10.4398
+    },
+    {
+        "roteiros":"Roteiro Afro",
+        "municipio":"São Paulo",
+        "uf":"SP",
+        "contato":null,
+        "id":114,
+        "x":-46.6248,
+        "y":-23.5294
+    },
+    {
+        "roteiros":"RoteirAfro Santos",
+        "municipio":"Santos",
+        "uf":"SP",
+        "contato":"@roteirafrosantos",
+        "id":115,
+        "x":-46.3232,
+        "y":-23.9574
+    },
+    {
+        "roteiros":"Baile do Carmo",
+        "municipio":"São Paulo",
+        "uf":"SP",
+        "contato":null,
+        "id":116,
+        "x":-46.5885,
+        "y":-23.5201
+    },
+    {
+        "roteiros":"Rota AfroBloco",
+        "municipio":"Curitiba",
+        "uf":"PR",
+        "contato":null,
+        "id":117,
+        "x":-49.2733,
+        "y":-25.4284
+    },
+    {
+        "roteiros":"Rota AfroBloco",
+        "municipio":"Cachoeira",
+        "uf":"BA",
+        "contato":"@turismocoletivojovensquilombas",
+        "id":118,
+        "x":-38.864611,
+        "y":-12.648656
+    }
+]

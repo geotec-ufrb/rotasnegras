@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa de Roteiros Turísticos</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div class="sidebar">
+    <h1>Rotas Negras</h1>
+    <nav>
+      <ul>
+        <li><a href="#map">Mapa</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="content">
+    <main>
+      <section id="sobre">
+        <p>Este mapa interativo apresenta roteiros turísticos de promoção e valorização da história e da memória da cultura afro-brasileira.</p>
+      </section>
+      <section id="map-container">
+        <div id="map"></div>
+      </section>
+      <section id="contato">
+        <p>Entre em contato conosco para mais informações:</p>
+        <ul>
+          <li>diversifica@ccs.ufrb.edu.br</li>
+          <li>geotec@ccaab.ufrb.edu.br</li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025. Todos os direitos reservados.</p>
+      <a href="#top" id="back-to-top">Voltar ao topo</a>
+      <section id="creditos">
+        <p><strong>Projeto Agentes de Promoção da Igualdade Racial e Rotas Negras</strong></p>
+        <p>Observatório da Inclusão e Diversidade na Educação – DIVERSIFICA</p>
+        <p>Universidade Federal do Recôncavo da Bahia </p>Ministério da Igualdade Racial</p>
+        <p>Contato: <a href="mailto:diversifica@ccs.ufrb.edu.br">diversifica@ccs.ufrb.edu.br</a> / <a href="mailto:geotec@ccaab.ufrb.edu.br">geotec@ccaab.ufrb.edu.br</a></p>
+      </section>
+    </footer>
+  </div>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
