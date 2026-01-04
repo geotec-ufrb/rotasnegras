@@ -9,6 +9,7 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
+  <button id="toggle-sidebar">☰</button> <!-- Botão para alternar a barra lateral -->
   <div class="sidebar">
     <h1>Rotas Negras</h1>
     <nav>
@@ -25,7 +26,7 @@
         <p>Este mapa interativo apresenta roteiros turísticos de promoção e valorização da história e da memória da cultura afro-brasileira.</p>
       </section>
       <section id="map-container">
-        <div id="map"></div>
+        <div id="map"></div> <!-- Elemento para o mapa -->
       </section>
       <section id="contato">
         <p>Entre em contato conosco para mais informações:</p>
@@ -50,5 +51,13 @@
   </div>
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="scripts.js"></script>
+  <script>
+    // Alternar a barra lateral
+    const toggleButton = document.getElementById('toggle-sidebar');
+    const sidebar = document.querySelector('.sidebar');
+    toggleButton.addEventListener('click', () => {
+      sidebar.classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
