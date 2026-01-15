@@ -1,3 +1,11 @@
+/* Nova paleta de cores */
+:root {
+  --primary-color: #1E90FF; /* Azul vibrante */
+  --secondary-color: #FFD700; /* Amarelo ouro */
+  --background-color: #F0F8FF; /* Azul claro */
+  --text-color: #333333; /* Cinza escuro */
+}
+
 /* Estilização geral */
 body {
   font-family: 'Roboto', sans-serif; /* Fonte moderna */
@@ -6,8 +14,8 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-color: #f0f0f0; /* Cinza claro como tema principal */
-  color: #333; /* Texto escuro */
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 /* Botão para alternar a barra lateral */
@@ -15,7 +23,7 @@ body {
   position: fixed;
   top: 10px;
   left: 10px;
-  background-color: #333; /* Cinza escuro */
+  background-color: var(--primary-color);
   color: #fff;
   border: none;
   padding: 10px 15px;
@@ -27,14 +35,14 @@ body {
 }
 
 #toggle-sidebar:hover {
-  background-color: #555; /* Cinza mais escuro */
+  background-color: var(--secondary-color);
 }
 
 /* Barra lateral */
 .sidebar {
   width: 220px; /* Largura ajustada */
-  background-color: #d3d3d3; /* Cinza claro */
-  color: #333;
+  background-color: var(--primary-color);
+  color: #fff;
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -63,7 +71,7 @@ body {
 }
 
 .sidebar nav ul li a {
-  color: #333;
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
   padding: 10px;
@@ -73,7 +81,7 @@ body {
 }
 
 .sidebar nav ul li a:hover {
-  background-color: #b0b0b0; /* Cinza mais escuro ao passar o mouse */
+  background-color: var(--secondary-color);
 }
 
 /* Conteúdo principal */
@@ -149,10 +157,10 @@ main {
 
 /* Rodapé */
 footer {
-  background-color: #fff; /* Fundo branco */
-  color: #333; /* Texto escuro para contraste */
+  background-color: var(--primary-color);
+  color: #fff;
   text-align: center;
-  padding: 20px;
+  padding: 2.5px; /* Reduzido ainda mais */
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
 }
 
@@ -169,6 +177,11 @@ footer a:hover {
 #creditos {
   margin-top: 10px;
   font-size: 0.9em;
+}
+
+#creditos img {
+  margin-top: 0; /* Remove o espaçamento superior */
+  margin-bottom: 10px; /* Adiciona um pequeno espaçamento inferior, se necessário */
 }
 
 /* Estilo para a legenda */
