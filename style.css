@@ -1,306 +1,557 @@
-/* RESET BÁSICO */
-* {
+:root {
+  --ink: #2d211b;
+  --muted: #715c4e;
+  --forest: #4a2d23;
+  --forest-2: #914f34;
+  --gold: #c48a3f;
+  --gold-light: #e7cfaa;
+  --paper: #f3e8d8;
+  --surface: #fffaf2;
+  --line: #d9c6b0;
+  --shadow: 0 18px 48px rgba(78, 45, 31, 0.17);
+  --radius-lg: 24px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  background:
+    radial-gradient(circle at 12% 12%, rgba(196, 138, 63, 0.11), transparent 28rem),
+    var(--paper);
+  color: var(--ink);
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
 }
 
-html, body {
-  height: 100%;
-  font-family: Arial, sans-serif;
-}
+button, input, select { font: inherit; }
+a { color: inherit; }
+h1, h2, h3, p { margin-top: 0; }
+h1, h2 { font-family: Georgia, "Times New Roman", serif; }
 
-/* BOTÃO MENU (mobile) */
-#toggle-sidebar {
-  display: none;
+.skip-link {
   position: fixed;
-  top: 15px;
-  left: 15px;
-  z-index: 1100;
-  background: #000;
-  color: #fff;
-  border: none;
-  font-size: 22px;
+  left: 16px;
+  top: -80px;
+  z-index: 2000;
   padding: 10px 14px;
-  border-radius: 6px;
-  cursor: pointer;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--forest);
+  font-weight: 700;
+  transition: top 0.2s ease;
 }
 
-/* SIDEBAR */
-.sidebar {
-  position: fixed;
+.skip-link:focus { top: 12px; }
+
+.site-header {
+  position: sticky;
   top: 0;
-  left: 0;
-  width: 260px;
-  height: 100vh;
-  background: #111;
-  color: #fff;
-  padding: 20px;
-  z-index: 1000;
-  transition: transform 0.3s ease;
-}
-
-.sidebar h1 {
-  margin-bottom: 20px;
-  font-size: 22px;
-}
-
-.sidebar ul {
-  list-style: none;
-}
-
-.sidebar li {
-  margin-bottom: 12px;
-}
-
-.sidebar a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* ESCONDER SIDEBAR */
-.sidebar.hidden {
-  transform: translateX(-100%);
-}
-
-/* CONTEÚDO */
-.content {
-  margin-left: 260px;
-  min-height: 100vh;
+  z-index: 1200;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 80px;
+  padding: 12px clamp(20px, 5vw, 72px);
+  border-bottom: 1px solid rgba(239, 205, 157, 0.2);
+  background: rgba(67, 39, 29, 0.98);
+  color: #fff;
+  box-shadow: 0 8px 30px rgba(54, 30, 21, 0.2);
 }
 
-/* MAIN */
-main {
-  flex: 1;
-  padding: 20px;
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
 }
 
-/* MAPA */
-#map-container {
-  width: 100%;
-  height: calc(100vh - 200px);
-  margin-top: 20px;
+.brand img {
+  width: 54px;
+  height: 54px;
+  border: 2px solid rgba(255, 255, 255, 0.78);
+  border-radius: 50%;
+  background: #fff;
+  object-fit: cover;
+}
+
+.brand span { display: flex; flex-direction: column; }
+.brand strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.35rem;
+  line-height: 1.1;
+}
+
+.brand small {
+  margin-top: 3px;
+  color: #e8d5bd;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 3vw, 38px);
+}
+
+.main-nav a {
+  position: relative;
+  padding: 8px 0;
+  color: #f8fcf9;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.main-nav a::after {
+  position: absolute;
+  right: 0;
+  bottom: 2px;
+  left: 0;
+  height: 2px;
+  background: var(--gold);
+  content: "";
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
+}
+
+.main-nav a:hover::after,
+.main-nav a:focus-visible::after { transform: scaleX(1); }
+
+main { overflow: hidden; }
+
+.map-section {
+  width: min(1540px, 100%);
+  margin: 0 auto;
+  padding: clamp(26px, 4vw, 54px) clamp(16px, 3vw, 44px) clamp(40px, 6vw, 78px);
+}
+
+.map-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+  align-items: end;
+  gap: 28px;
+  margin: 0 4px 24px;
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  color: var(--forest-2);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+h1 {
+  max-width: 760px;
+  margin-bottom: 0;
+  font-size: clamp(2rem, 4vw, 4rem);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+}
+
+.map-intro {
+  max-width: 560px;
+  margin: 0;
+  color: var(--muted);
+}
+
+.map-shell {
+  position: relative;
+  overflow: hidden;
+  min-height: 620px;
+  height: min(76vh, 860px);
+  border: 1px solid rgba(107, 64, 43, 0.22);
+  border-radius: var(--radius-lg);
+  background: #d8c8b4;
+  box-shadow: var(--shadow);
+  isolation: isolate;
 }
 
 #map {
   width: 100%;
   height: 100%;
-  border-radius: 10px;
+  background: #d8c8b4;
 }
 
-/* FOOTER */
-footer {
-  background: #f2f2f2;
-  padding: 20px;
-  text-align: center;
-}
-
-footer img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* ===== MOBILE ===== */
-@media (max-width: 768px) {
-
-  #toggle-sidebar {
-    display: block;
-  }
-
-  .sidebar {
-    transform: translateX(-100%);
-  }
-
-  .sidebar.hidden {
-    transform: translateX(0);
-  }
-
-  .content {
-    margin-left: 0;
-  }
-
-  #map-container {
-    height: 70vh;
-  }
-
-  main {
-    padding-top: 70px;
-  }
-}
-/* ===== CREDITOS ===== */
-#creditos {
-  margin-top: 30px;
-  text-align: center;
-}
-
-#creditos p {
-  margin: 6px 0;
-  font-size: 14px;
-  line-height: 1.4;
-}
-
-/* CONTAINER GERAL */
-.logos {
+.map-actions {
+  position: absolute;
+  top: 16px;
+  left: 66px;
+  z-index: 900;
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 30px;
-  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-toggle,
+.result-badge {
+  min-height: 44px;
+  border: 1px solid rgba(107, 64, 43, 0.2);
+  border-radius: 999px;
+  background: rgba(255, 250, 242, 0.97);
+  box-shadow: 0 8px 24px rgba(73, 41, 28, 0.18);
+  backdrop-filter: blur(10px);
+}
+
+.filter-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 17px;
+  color: var(--forest);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.filter-toggle span { color: var(--gold); font-size: 1.25rem; }
+.filter-toggle:hover, .filter-toggle:focus-visible { background: var(--forest); color: #fff; }
+
+.result-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 15px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.filter-panel {
+  position: absolute;
+  top: 72px;
+  left: 16px;
+  z-index: 950;
+  width: min(360px, calc(100% - 32px));
+  max-height: calc(100% - 88px);
+  overflow-y: auto;
+  padding: 22px;
+  border: 1px solid rgba(107, 64, 43, 0.2);
+  border-radius: 20px;
+  background: rgba(255, 250, 242, 0.98);
+  box-shadow: 0 22px 54px rgba(73, 41, 28, 0.25);
+}
+
+.filter-panel[hidden], .map-message[hidden] { display: none; }
+
+.filter-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
   margin-bottom: 20px;
 }
 
-/* PADRÃO BASE (segurança visual) */
-.logos img {
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  display: block;
+.filter-header h2 { margin: 0; font-size: 1.75rem; line-height: 1; }
+
+.icon-button {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: #fff;
+  color: var(--forest);
+  font-size: 1.55rem;
+  line-height: 1;
+  cursor: pointer;
+  place-items: center;
 }
 
-/* LOGO PRINCIPAL – Rotas Negras */
-.logo-principal img {
-  max-width: 220px;
-  max-height: 110px;
+.filter-fields { display: grid; gap: 8px; }
+.filter-fields label {
+  margin-top: 6px;
+  color: var(--ink);
+  font-size: 0.88rem;
+  font-weight: 800;
 }
 
-/* LOGO INSTITUCIONAL – UFRB / Governo */
-.logo-institucional img {
-  max-width: 160px;
-  max-height: 80px;
-}
-
-/* ===== MOBILE ===== */
-@media (max-width: 768px) {
-  .logos {
-    gap: 20px;
-  }
-
-  .logo-principal img {
-    max-width: 180px;
-    max-height: 90px;
-  }
-
-  .logo-institucional img {
-    max-width: 130px;
-    max-height: 65px;
-  }
-
-  #creditos p {
-    font-size: 13px;
-  }
-}
-/* =========================
-   GOV.BR FOOTER – HOMOLOGADO
-   ========================= */
-
-/* Fonte oficial */
-@font-face {
-  font-family: 'Rawline';
-  src: local('Rawline');
-}
-
-.gov-footer {
-  background-color: #f8f8f8;
-  border-top: 4px solid #1351b4;
-  padding: 32px 16px;
-  color: #1c1c1c;
-  font-family: Rawline, Arial, Helvetica, sans-serif;
-}
-
-.gov-footer-container {
-  max-width: 1140px;
-  margin: 0 auto;
-}
-
-/* LOGOS */
-.gov-footer-logos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 48px;
-  flex-wrap: wrap;
-  margin-bottom: 24px;
-}
-
-.gov-logo {
+.search-field {
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  background: #fff;
 }
 
-.gov-logo img {
-  width: auto;
-  height: auto;
-  object-fit: contain;
+.search-field:focus-within {
+  border-color: var(--forest-2);
+  box-shadow: 0 0 0 3px rgba(31, 101, 71, 0.12);
 }
 
-/* Hierarquia visual */
-.gov-logo-projeto img {
-  max-width: 220px;
-  max-height: 110px;
+.search-field span { color: var(--forest-2); font-size: 1.25rem; }
+.search-field input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--ink);
 }
 
-.gov-logo-executor img {
-  max-width: 180px;
-  max-height: 90px;
+.filter-fields select {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 36px 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  background: #fff;
+  color: var(--ink);
+  cursor: pointer;
 }
 
-.gov-logo-governo img {
-  max-width: 140px;
-  max-height: 70px;
+.filter-fields select:focus-visible,
+.icon-button:focus-visible,
+.clear-button:focus-visible {
+  outline: 3px solid rgba(217, 166, 46, 0.42);
+  outline-offset: 2px;
 }
 
-/* TEXTO */
-.gov-footer-text {
+.filter-footer {
+  display: grid;
+  gap: 12px;
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.filter-footer p { margin: 0; color: var(--muted); font-size: 0.84rem; }
+.clear-button {
+  min-height: 44px;
+  border: 0;
+  border-radius: 11px;
+  background: var(--forest);
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.clear-button:hover { background: var(--forest-2); }
+
+.map-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 850;
+  display: grid;
+  min-width: min(360px, calc(100% - 32px));
+  padding: 22px;
+  border-radius: 16px;
+  background: rgba(255, 250, 242, 0.97);
+  box-shadow: var(--shadow);
   text-align: center;
-  font-size: 14px;
-  line-height: 1.6;
+  transform: translate(-50%, -50%);
 }
 
-.gov-footer-text p {
-  margin-bottom: 6px;
+.map-message span { margin-top: 4px; color: var(--muted); }
+
+.leaflet-control-zoom,
+.leaflet-control-layers,
+.leaflet-control-scale-line {
+  border: 0 !important;
+  box-shadow: 0 8px 22px rgba(73, 41, 28, 0.2) !important;
 }
 
-.gov-footer-text a {
-  color: #1351b4;
+.leaflet-bar a, .leaflet-control-layers { color: var(--forest) !important; }
+.leaflet-popup-content-wrapper, .leaflet-popup-tip { background: var(--surface); }
+.route-popup { min-width: 210px; color: var(--ink); }
+.route-popup .popup-location {
+  margin-bottom: 7px;
+  color: var(--forest-2);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.route-popup strong {
+  display: block;
+  margin-bottom: 5px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.1rem;
+  line-height: 1.25;
+}
+
+.route-popup p { margin: 0; line-height: 1.45; }
+.route-popup .popup-contact { margin-top: 7px; color: var(--muted); font-size: 0.82rem; }
+
+.compass-control, .fullscreen-control, .map-legend {
+  border: 1px solid rgba(107, 64, 43, 0.2);
+  border-radius: 12px;
+  background: rgba(255, 250, 242, 0.97);
+  box-shadow: 0 8px 22px rgba(73, 41, 28, 0.19);
+}
+
+.compass-control {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+}
+
+.compass-control img { width: 35px; height: 35px; }
+.fullscreen-control {
+  padding: 9px 12px;
+  color: var(--forest);
+  font-size: 0.78rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.map-legend { padding: 10px 12px; color: var(--ink); font-size: 0.76rem; }
+.map-legend span {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  margin-right: 6px;
+  border-radius: 50%;
+  background: #c2653f;
+  box-shadow: 0 0 0 2px rgba(194, 101, 63, 0.23);
+}
+
+.about-section {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.8fr) minmax(300px, 1.2fr);
+  gap: clamp(30px, 7vw, 110px);
+  padding: clamp(48px, 7vw, 96px) clamp(24px, 8vw, 140px);
+  background: linear-gradient(135deg, #ecd9bb 0%, var(--gold-light) 55%, #dcb989 100%);
+}
+
+.about-section h2 {
+  max-width: 600px;
+  margin: 0;
+  color: var(--forest);
+  font-size: clamp(2rem, 3vw, 3.25rem);
+  line-height: 1.08;
+}
+
+.about-section > p {
+  align-self: end;
+  max-width: 720px;
+  margin: 0;
+  font-size: clamp(1rem, 1.6vw, 1.22rem);
+}
+
+.site-footer {
+  padding: 0 clamp(24px, 7vw, 112px);
+  background: #332018;
+  color: #f8eee1;
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: clamp(36px, 7vw, 110px);
+  padding: clamp(48px, 7vw, 84px) 0 42px;
+}
+
+.site-footer .eyebrow { color: #e9bf54; }
+.footer-about h2 {
+  margin-bottom: 12px;
+  color: #fff;
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+  line-height: 1;
+}
+
+.footer-about p:last-child { max-width: 420px; color: #d8c3ad; }
+.footer-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+}
+
+.footer-links h3 {
+  margin: 0 0 14px;
+  color: #fff;
+  font-size: 0.86rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.footer-links p, .footer-links a {
+  display: block;
+  margin: 0 0 8px;
+  color: #d8c3ad;
   text-decoration: none;
-  font-weight: 500;
 }
 
-.gov-footer-text a:hover {
+.footer-links a:hover, .footer-links a:focus-visible {
+  color: #fff;
   text-decoration: underline;
 }
 
-/* MOBILE */
-@media (max-width: 768px) {
-  .gov-footer {
-    padding: 24px 12px;
-  }
-
-  .gov-footer-logos {
-    gap: 24px;
-  }
-
-  .gov-logo-projeto img {
-    max-width: 180px;
-    max-height: 90px;
-  }
-
-  .gov-logo-executor img {
-    max-width: 150px;
-    max-height: 75px;
-  }
-
-  .gov-logo-governo img {
-    max-width: 120px;
-    max-height: 60px;
-  }
-
-  .gov-footer-text {
-    font-size: 13px;
-  }
+.partner-logos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(130px, 1fr));
+  align-items: center;
+  gap: clamp(24px, 5vw, 70px);
+  padding: 24px clamp(18px, 4vw, 54px);
+  border-radius: 18px;
+  border: 1px solid rgba(196, 138, 63, 0.34);
+  background: #fffaf2;
 }
 
+.partner-logos img {
+  justify-self: center;
+  width: auto;
+  max-width: 100%;
+  max-height: 82px;
+  object-fit: contain;
+}
+
+.partner-logos img:nth-child(3) { max-height: 96px; }
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 24px 0 30px;
+  color: #bea993;
+  font-size: 0.86rem;
+}
+
+.footer-bottom p { margin: 0; }
+.footer-bottom a { color: #fff; font-weight: 700; text-decoration: none; }
+
+@media (max-width: 780px) {
+  .site-header { min-height: 70px; padding: 9px 16px; }
+  .brand img { width: 46px; height: 46px; }
+  .brand strong { font-size: 1.12rem; }
+  .brand small { display: none; }
+  .main-nav { gap: 14px; }
+  .main-nav a { font-size: 0.82rem; }
+  .main-nav a:nth-child(2) { display: none; }
+  .map-heading { grid-template-columns: 1fr; gap: 12px; }
+  .map-shell { min-height: 540px; height: 72vh; border-radius: 18px; }
+  .map-actions { top: 12px; left: 56px; gap: 7px; }
+  .filter-toggle { min-height: 40px; padding: 8px 13px; font-size: 0.84rem; }
+  .result-badge { min-height: 40px; padding: 8px 11px; font-size: 0.76rem; }
+  .filter-panel { top: 64px; left: 10px; width: calc(100% - 20px); max-height: calc(100% - 74px); }
+  .about-section, .footer-main, .footer-links { grid-template-columns: 1fr; }
+  .footer-main { gap: 24px; }
+  .footer-links { gap: 22px; }
+  .partner-logos { grid-template-columns: 1fr; }
+  .partner-logos img { max-height: 68px; }
+  .footer-bottom { align-items: flex-start; flex-direction: column; }
+}
+
+@media (max-width: 430px) {
+  .main-nav a:first-child { display: none; }
+  .map-section { padding-right: 10px; padding-left: 10px; }
+  .map-actions { right: 10px; }
+  .result-badge { margin-left: auto; }
+  .fullscreen-control, .map-legend { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: 0.01ms !important; }
+}

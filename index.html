@@ -1,81 +1,137 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mapa de Roteiros Turísticos</title>
+  <meta name="description" content="Mapa interativo de roteiros turísticos que valorizam a história e a cultura afro-brasileira.">
+  <title>Rotas Negras | Mapa de roteiros</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <button id="toggle-sidebar">☰</button> <!-- Botão para alternar a barra lateral -->
-  <div class="sidebar">
-    <h1>Rotas Negras</h1>
-    <nav>
-      <ul>
-        <li><a href="#map">Mapa</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
+  <a class="skip-link" href="#mapa">Ir para o mapa</a>
+
+  <header class="site-header" id="topo">
+    <a class="brand" href="#topo" aria-label="Rotas Negras — início">
+      <img src="rotas-negras-logo.jpeg" alt="" width="56" height="56">
+      <span>
+        <strong>Rotas Negras</strong>
+        <small>História, memória e território</small>
+      </span>
+    </a>
+
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="#mapa">Mapa</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
     </nav>
-  </div>
-  <div class="content">
-    <main>
-      <section id="sobre">
-        <p>Este mapa interativo apresenta roteiros turísticos de promoção e valorização da história e da memória da cultura afro-brasileira.</p>
-      </section>
-      <section id="map-container">
-        <div id="map"></div> <!-- Elemento para o mapa -->
-      </section>
-    </main>
-    <footer>
-      <p>&copy; 2025. Todos os direitos reservados.</p>
-      <a href="#top" id="back-to-top">Voltar ao topo</a>
-      <section id="creditos">
-  <div class="gov-footer-logos">
-    <div class="gov-logo gov-logo-governo">
-    <img src="rotas-negras.png" alt="Governo Federal - Brasil">
-  </div>
-    
-  <div class="gov-logo gov-logo-executor">
-    <img src="logo-ufrb.png" alt="Universidade Federal do Recôncavo da Bahia">
-  </div>
-    
-  <div class="gov-logo gov-logo-projeto">
-    <img src="rotas-negras-logo.jpeg" alt="Rotas Negras">
-  </div>
+  </header>
 
- 
+  <main>
+    <section class="map-section" id="mapa" aria-labelledby="map-title">
+      <div class="map-heading">
+        <div>
+          <p class="eyebrow">Explore o Brasil</p>
+          <h1 id="map-title">Roteiros de cultura afro-brasileira</h1>
+        </div>
+        <p class="map-intro">Encontre iniciativas, territórios e experiências que preservam e promovem a memória negra.</p>
+      </div>
 
-</div>
+      <div class="map-shell">
+        <div class="map-actions" aria-label="Ferramentas do mapa">
+          <button class="filter-toggle" id="filter-toggle" type="button" aria-controls="filter-panel" aria-expanded="false">
+            <span aria-hidden="true">☷</span>
+            Filtrar roteiros
+          </button>
+          <span class="result-badge" id="result-count" aria-live="polite">Carregando…</span>
+        </div>
 
+        <aside class="filter-panel" id="filter-panel" aria-labelledby="filter-title" hidden>
+          <div class="filter-header">
+            <div>
+              <p class="eyebrow">Refine a busca</p>
+              <h2 id="filter-title">Filtros</h2>
+            </div>
+            <button class="icon-button" id="filter-close" type="button" aria-label="Fechar filtros">×</button>
+          </div>
 
-  <p><strong>Projeto Agentes de Promoção da Igualdade Racial e Rotas Negras</strong></p>
-  <p>Observatório da Inclusão e Diversidade na Educação – DIVERSIFICA</p>
-  <p>Universidade Federal do Recôncavo da Bahia</p>
-  <p>Ministério da Igualdade Racial</p>
-  <p>
-    Contato:
-    <a href="mailto:diversifica@ccs.ufrb.edu.br">diversifica@ccs.ufrb.edu.br</a> /
-    <a href="mailto:geotec@ccaab.ufrb.edu.br">geotec@ccaab.ufrb.edu.br</a>
-  </p>
-</section>
+          <div class="filter-fields">
+            <label for="search-input">Buscar roteiro ou município</label>
+            <div class="search-field">
+              <span aria-hidden="true">⌕</span>
+              <input id="search-input" type="search" placeholder="Ex.: quilombo, Salvador…" autocomplete="off">
+            </div>
 
+            <label for="state-filter">Estado</label>
+            <select id="state-filter">
+              <option value="">Todos os estados</option>
+            </select>
 
-    </footer>
-  </div>
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+            <label for="city-filter">Município</label>
+            <select id="city-filter">
+              <option value="">Todos os municípios</option>
+            </select>
+          </div>
+
+          <div class="filter-footer">
+            <p id="filter-summary">Mostrando todos os roteiros.</p>
+            <button class="clear-button" id="clear-filters" type="button">Limpar filtros</button>
+          </div>
+        </aside>
+
+        <div id="map" role="application" aria-label="Mapa interativo dos roteiros turísticos"></div>
+        <div class="map-message" id="map-message" hidden>
+          <strong>Nenhum roteiro encontrado</strong>
+          <span>Tente remover um filtro ou buscar outro termo.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section" id="sobre" aria-labelledby="about-title">
+      <div>
+        <p class="eyebrow">Sobre o projeto</p>
+        <h2 id="about-title">Geotecnologia a serviço da memória</h2>
+      </div>
+      <p>O mapa reúne roteiros turísticos que promovem e valorizam a história e a cultura afro-brasileira, ampliando a visibilidade de comunidades, trajetórias e territórios de resistência negra.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contato">
+    <div class="footer-main">
+      <div class="footer-about">
+        <p class="eyebrow">Realização</p>
+        <h2>Rotas Negras</h2>
+        <p>Projeto Agentes de Promoção da Igualdade Racial e Rotas Negras.</p>
+      </div>
+
+      <div class="footer-links">
+        <div>
+          <h3>Instituições</h3>
+          <p>Observatório da Inclusão e Diversidade na Educação — DIVERSIFICA</p>
+          <p>Universidade Federal do Recôncavo da Bahia</p>
+          <p>Ministério da Igualdade Racial</p>
+        </div>
+        <div>
+          <h3>Contato</h3>
+          <a href="mailto:diversifica@ccs.ufrb.edu.br">diversifica@ccs.ufrb.edu.br</a>
+          <a href="mailto:geotec@ccaab.ufrb.edu.br">geotec@ccaab.ufrb.edu.br</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="partner-logos" aria-label="Instituições parceiras">
+      <img src="rotas-negras.png" alt="Governo Federal — Brasil">
+      <img src="logo-ufrb.png" alt="Universidade Federal do Recôncavo da Bahia">
+      <img src="rotas-negras-logo.jpeg" alt="Rotas Negras">
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="current-year">2025</span> Rotas Negras. Todos os direitos reservados.</p>
+      <a href="#topo">Voltar ao topo ↑</a>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="scripts.js"></script>
-  <script>
-    // Alternar a barra lateral
-    const toggleButton = document.getElementById('toggle-sidebar');
-    const sidebar = document.querySelector('.sidebar');
-    toggleButton.addEventListener('click', () => {
-      sidebar.classList.toggle('hidden');
-    });
-  </script>
 </body>
 </html>
-
-
