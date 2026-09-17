@@ -65,17 +65,7 @@ h1, h2 { font-family: Georgia, "Times New Roman", serif; }
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
   text-decoration: none;
-}
-
-.brand img {
-  width: 54px;
-  height: 54px;
-  border: 2px solid rgba(255, 255, 255, 0.78);
-  border-radius: 50%;
-  background: #fff;
-  object-fit: cover;
 }
 
 .brand span { display: flex; flex-direction: column; }
@@ -523,7 +513,6 @@ h1 {
 
 @media (max-width: 780px) {
   .site-header { min-height: 70px; padding: 9px 16px; }
-  .brand img { width: 46px; height: 46px; }
   .brand strong { font-size: 1.12rem; }
   .brand small { display: none; }
   .main-nav { gap: 14px; }
