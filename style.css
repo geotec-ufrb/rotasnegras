@@ -1,14 +1,14 @@
 :root {
-  --ink: #2d211b;
-  --muted: #715c4e;
-  --forest: #4a2d23;
-  --forest-2: #914f34;
-  --gold: #c48a3f;
-  --gold-light: #e7cfaa;
-  --paper: #f3e8d8;
-  --surface: #fffaf2;
-  --line: #d9c6b0;
-  --shadow: 0 18px 48px rgba(78, 45, 31, 0.17);
+  --ink: #080d16;
+  --muted: #526070;
+  --forest: #082f64;
+  --forest-2: #0759b8;
+  --gold: #2583e8;
+  --gold-light: #d9eaff;
+  --paper: #f4f7fb;
+  --surface: #ffffff;
+  --line: #d7e0eb;
+  --shadow: 0 18px 48px rgba(5, 32, 68, 0.16);
   --radius-lg: 24px;
 }
 
@@ -19,7 +19,7 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   background:
-    radial-gradient(circle at 12% 12%, rgba(196, 138, 63, 0.11), transparent 28rem),
+    radial-gradient(circle at 12% 12%, rgba(37, 131, 232, 0.1), transparent 28rem),
     var(--paper);
   color: var(--ink);
   font-family: Inter, "Segoe UI", Arial, sans-serif;
@@ -56,10 +56,10 @@ h1, h2 { font-family: Georgia, "Times New Roman", serif; }
   justify-content: space-between;
   min-height: 80px;
   padding: 12px clamp(20px, 5vw, 72px);
-  border-bottom: 1px solid rgba(239, 205, 157, 0.2);
-  background: rgba(67, 39, 29, 0.98);
+  border-bottom: 1px solid rgba(112, 176, 245, 0.22);
+  background: rgba(3, 18, 38, 0.98);
   color: #fff;
-  box-shadow: 0 8px 30px rgba(54, 30, 21, 0.2);
+  box-shadow: 0 8px 30px rgba(0, 8, 20, 0.22);
 }
 
 .brand {
@@ -77,7 +77,7 @@ h1, h2 { font-family: Georgia, "Times New Roman", serif; }
 
 .brand small {
   margin-top: 3px;
-  color: #e8d5bd;
+  color: #c9ddf4;
   font-size: 0.78rem;
   letter-spacing: 0.02em;
 }
@@ -91,7 +91,7 @@ h1, h2 { font-family: Georgia, "Times New Roman", serif; }
 .main-nav a {
   position: relative;
   padding: 8px 0;
-  color: #f8fcf9;
+  color: #f5f9ff;
   font-size: 0.95rem;
   font-weight: 700;
   text-decoration: none;
@@ -156,9 +156,9 @@ h1 {
   overflow: hidden;
   min-height: 620px;
   height: min(76vh, 860px);
-  border: 1px solid rgba(107, 64, 43, 0.22);
+  border: 1px solid rgba(8, 47, 100, 0.2);
   border-radius: var(--radius-lg);
-  background: #d8c8b4;
+  background: #d9e4f0;
   box-shadow: var(--shadow);
   isolation: isolate;
 }
@@ -166,7 +166,7 @@ h1 {
 #map {
   width: 100%;
   height: 100%;
-  background: #d8c8b4;
+  background: #d9e4f0;
 }
 
 .map-actions {
@@ -182,10 +182,10 @@ h1 {
 .filter-toggle,
 .result-badge {
   min-height: 44px;
-  border: 1px solid rgba(107, 64, 43, 0.2);
+  border: 1px solid rgba(8, 47, 100, 0.2);
   border-radius: 999px;
-  background: rgba(255, 250, 242, 0.97);
-  box-shadow: 0 8px 24px rgba(73, 41, 28, 0.18);
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 8px 24px rgba(5, 32, 68, 0.18);
   backdrop-filter: blur(10px);
 }
 
@@ -220,10 +220,10 @@ h1 {
   max-height: calc(100% - 88px);
   overflow-y: auto;
   padding: 22px;
-  border: 1px solid rgba(107, 64, 43, 0.2);
+  border: 1px solid rgba(8, 47, 100, 0.2);
   border-radius: 20px;
-  background: rgba(255, 250, 242, 0.98);
-  box-shadow: 0 22px 54px rgba(73, 41, 28, 0.25);
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 22px 54px rgba(5, 32, 68, 0.24);
 }
 
 .filter-panel[hidden], .map-message[hidden] { display: none; }
@@ -274,7 +274,7 @@ h1 {
 
 .search-field:focus-within {
   border-color: var(--forest-2);
-  box-shadow: 0 0 0 3px rgba(31, 101, 71, 0.12);
+  box-shadow: 0 0 0 3px rgba(37, 131, 232, 0.15);
 }
 
 .search-field span { color: var(--forest-2); font-size: 1.25rem; }
@@ -301,7 +301,7 @@ h1 {
 .filter-fields select:focus-visible,
 .icon-button:focus-visible,
 .clear-button:focus-visible {
-  outline: 3px solid rgba(217, 166, 46, 0.42);
+  outline: 3px solid rgba(37, 131, 232, 0.35);
   outline-offset: 2px;
 }
 
@@ -335,7 +335,7 @@ h1 {
   min-width: min(360px, calc(100% - 32px));
   padding: 22px;
   border-radius: 16px;
-  background: rgba(255, 250, 242, 0.97);
+  background: rgba(255, 255, 255, 0.97);
   box-shadow: var(--shadow);
   text-align: center;
   transform: translate(-50%, -50%);
@@ -347,7 +347,7 @@ h1 {
 .leaflet-control-layers,
 .leaflet-control-scale-line {
   border: 0 !important;
-  box-shadow: 0 8px 22px rgba(73, 41, 28, 0.2) !important;
+  box-shadow: 0 8px 22px rgba(5, 32, 68, 0.18) !important;
 }
 
 .leaflet-bar a, .leaflet-control-layers { color: var(--forest) !important; }
@@ -374,10 +374,10 @@ h1 {
 .route-popup .popup-contact { margin-top: 7px; color: var(--muted); font-size: 0.82rem; }
 
 .compass-control, .fullscreen-control, .map-legend {
-  border: 1px solid rgba(107, 64, 43, 0.2);
+  border: 1px solid rgba(8, 47, 100, 0.2);
   border-radius: 12px;
-  background: rgba(255, 250, 242, 0.97);
-  box-shadow: 0 8px 22px rgba(73, 41, 28, 0.19);
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 8px 22px rgba(5, 32, 68, 0.18);
 }
 
 .compass-control {
@@ -403,8 +403,8 @@ h1 {
   height: 11px;
   margin-right: 6px;
   border-radius: 50%;
-  background: #c2653f;
-  box-shadow: 0 0 0 2px rgba(194, 101, 63, 0.23);
+  background: #080d16;
+  box-shadow: 0 0 0 2px rgba(8, 13, 22, 0.22);
 }
 
 .about-section {
@@ -412,7 +412,7 @@ h1 {
   grid-template-columns: minmax(260px, 0.8fr) minmax(300px, 1.2fr);
   gap: clamp(30px, 7vw, 110px);
   padding: clamp(48px, 7vw, 96px) clamp(24px, 8vw, 140px);
-  background: linear-gradient(135deg, #ecd9bb 0%, var(--gold-light) 55%, #dcb989 100%);
+  background: linear-gradient(135deg, #ffffff 0%, var(--gold-light) 58%, #b8d9ff 100%);
 }
 
 .about-section h2 {
@@ -432,8 +432,8 @@ h1 {
 
 .site-footer {
   padding: 0 clamp(24px, 7vw, 112px);
-  background: #332018;
-  color: #f8eee1;
+  background: #050a12;
+  color: #f4f8ff;
 }
 
 .footer-main {
@@ -443,7 +443,7 @@ h1 {
   padding: clamp(48px, 7vw, 84px) 0 42px;
 }
 
-.site-footer .eyebrow { color: #e9bf54; }
+.site-footer .eyebrow { color: #70b0f5; }
 .footer-about h2 {
   margin-bottom: 12px;
   color: #fff;
@@ -451,7 +451,7 @@ h1 {
   line-height: 1;
 }
 
-.footer-about p:last-child { max-width: 420px; color: #d8c3ad; }
+.footer-about p:last-child { max-width: 420px; color: #b9c9dc; }
 .footer-links {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -469,7 +469,7 @@ h1 {
 .footer-links p, .footer-links a {
   display: block;
   margin: 0 0 8px;
-  color: #d8c3ad;
+  color: #b9c9dc;
   text-decoration: none;
 }
 
@@ -485,8 +485,8 @@ h1 {
   gap: clamp(24px, 5vw, 70px);
   padding: 24px clamp(18px, 4vw, 54px);
   border-radius: 18px;
-  border: 1px solid rgba(196, 138, 63, 0.34);
-  background: #fffaf2;
+  border: 1px solid rgba(37, 131, 232, 0.3);
+  background: #ffffff;
 }
 
 .partner-logos img {
@@ -504,7 +504,7 @@ h1 {
   justify-content: space-between;
   gap: 20px;
   padding: 24px 0 30px;
-  color: #bea993;
+  color: #93a8c0;
   font-size: 0.86rem;
 }
 

@@ -56,8 +56,8 @@ legend.onAdd = function () {
 };
 legend.addTo(map);
 
-const earthIcon = L.icon({
-  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png',
+const blackIcon = L.icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-black.png',
   shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
   iconSize: [25, 41],
   iconAnchor: [12, 41],
@@ -145,7 +145,7 @@ function addMarkers(items) {
 
   items.forEach(route => {
     L.marker([Number(route.y), Number(route.x)], {
-      icon: earthIcon,
+      icon: blackIcon,
       title: `${route.roteiros} — ${route.municipio}/${route.uf}`
     })
       .bindPopup(markerPopup(route), { maxWidth: 320 })
