@@ -66,6 +66,19 @@ const blackIcon = L.icon({
   shadowAnchor: [12, 41]
 });
 
+const sinapirIcon = L.divIcon({
+  className: 'sinapir-marker-icon',
+  html: `
+    <svg viewBox="0 0 28 40" aria-hidden="true" focusable="false">
+      <path class="sinapir-marker-shape" d="M14 1C6.82 1 1 6.82 1 14c0 9.75 13 25 13 25s13-15.25 13-25C27 6.82 21.18 1 14 1Z" />
+      <circle class="sinapir-marker-center" cx="14" cy="14" r="4.5" />
+    </svg>
+  `,
+  iconSize: [28, 40],
+  iconAnchor: [14, 40],
+  popupAnchor: [0, -36]
+});
+
 const markerLayer = L.layerGroup().addTo(map);
 const filterToggle = document.getElementById('filter-toggle');
 const filterPanel = document.getElementById('filter-panel');
@@ -87,6 +100,25 @@ function normalizeText(value) {
     .replace(/[\u0300-\u036f]/g, '')
     .toLocaleLowerCase('pt-BR')
     .trim();
+}
+
+function normalizeSinapirValue(value) {
+  return String(value || '')
+    .trim()
+    .toLocaleLowerCase('pt-BR')
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function sinapirMunicipalityKey(municipality, state) {
+  return `${normalizeSinapirValue(municipality)}|${String(state || '').trim().toUpperCase()}`;
+}
+
+function isSinapirMunicipality(route) {
+  return MUNICIPIOS_SINAPIR.has(sinapirMunicipalityKey(route.municipio, route.uf));
 }
 
 function escapeHtml(value) {
@@ -144,8 +176,10 @@ function addMarkers(items) {
   markerLayer.clearLayers();
 
   items.forEach(route => {
+    const markerIcon = isSinapirMunicipality(route) ? sinapirIcon : blackIcon;
+
     L.marker([Number(route.y), Number(route.x)], {
-      icon: blackIcon,
+      icon: markerIcon,
       title: `${route.roteiros} — ${route.municipio}/${route.uf}`
     })
       .bindPopup(markerPopup(route), { maxWidth: 320 })
