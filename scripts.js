@@ -37,9 +37,9 @@ fullscreenControl.onAdd = function () {
   button.textContent = '⛶ Tela cheia';
   L.DomEvent.disableClickPropagation(button);
   L.DomEvent.on(button, 'click', () => {
-    const mapElement = document.getElementById('map');
+    const fullscreenTarget = document.querySelector('.map-shell');
     if (!document.fullscreenElement) {
-      mapElement.requestFullscreen().catch(error => console.error('Não foi possível abrir a tela cheia:', error));
+      fullscreenTarget.requestFullscreen().catch(error => console.error('Não foi possível abrir a tela cheia:', error));
     } else {
       document.exitFullscreen();
     }
@@ -51,7 +51,20 @@ fullscreenControl.addTo(map);
 const legend = L.control({ position: 'bottomright' });
 legend.onAdd = function () {
   const container = L.DomUtil.create('div', 'map-legend');
-  container.innerHTML = '<span aria-hidden="true"></span> Roteiro mapeado';
+  container.setAttribute('role', 'group');
+  container.setAttribute('aria-label', 'Legenda dos marcadores do mapa');
+  container.innerHTML = `
+    <strong class="map-legend-title">Legenda</strong>
+    <div class="map-legend-item">
+      <span class="map-legend-swatch map-legend-swatch-default" aria-hidden="true"></span>
+      <span>Roteiro mapeado</span>
+    </div>
+    <div class="map-legend-item">
+      <span class="map-legend-swatch map-legend-swatch-sinapir" aria-hidden="true"></span>
+      <span><strong>SINAPIR</strong> — município aderente ao Sistema Nacional de Promoção da Igualdade Racial</span>
+    </div>
+  `;
+  L.DomEvent.disableClickPropagation(container);
   return container;
 };
 legend.addTo(map);
@@ -86,10 +99,12 @@ const filterClose = document.getElementById('filter-close');
 const searchInput = document.getElementById('search-input');
 const stateFilter = document.getElementById('state-filter');
 const cityFilter = document.getElementById('city-filter');
+const sinapirFilter = document.getElementById('sinapir-filter');
 const clearFilters = document.getElementById('clear-filters');
 const resultCount = document.getElementById('result-count');
 const filterSummary = document.getElementById('filter-summary');
 const mapMessage = document.getElementById('map-message');
+const mapShell = document.querySelector('.map-shell');
 const siteHeader = document.querySelector('.site-header');
 const navToggle = document.getElementById('nav-toggle');
 const mainNavigation = document.getElementById('main-nav');
@@ -252,7 +267,10 @@ function setSelectOptions(select, values, defaultLabel) {
 
 function updateCityOptions() {
   const state = stateFilter.value;
-  const matchingRoutes = state ? routes.filter(route => route.uf === state) : routes;
+  const matchingRoutes = routes.filter(route => {
+    return (!state || route.uf === state)
+      && (!sinapirFilter.checked || isSinapirMunicipality(route));
+  });
   setSelectOptions(cityFilter, uniqueSorted(matchingRoutes.map(route => route.municipio)), 'Todos os municípios');
 }
 
@@ -289,12 +307,14 @@ function applyFilters({ adjustMap = true } = {}) {
   const query = normalizeText(searchInput.value);
   const state = stateFilter.value;
   const city = cityFilter.value;
+  const sinapirOnly = sinapirFilter.checked;
 
   const filtered = routes.filter(route => {
     const searchableText = normalizeText(`${route.roteiros} ${route.municipio} ${route.uf} ${route.contato || ''}`);
     return (!query || searchableText.includes(query))
       && (!state || route.uf === state)
-      && (!city || route.municipio === city);
+      && (!city || route.municipio === city)
+      && (!sinapirOnly || isSinapirMunicipality(route));
   });
 
   addMarkers(filtered);
@@ -308,7 +328,7 @@ function applyFilters({ adjustMap = true } = {}) {
 
   if (!adjustMap) return;
 
-  const hasActiveFilters = Boolean(query || state || city);
+  const hasActiveFilters = Boolean(query || state || city || sinapirOnly);
   if (filtered.length > 0 && hasActiveFilters) {
     const bounds = L.latLngBounds(filtered.map(route => [Number(route.y), Number(route.x)]));
     map.fitBounds(bounds, { padding: [55, 55], maxZoom: 9 });
@@ -319,12 +339,14 @@ function applyFilters({ adjustMap = true } = {}) {
 
 function openFilters() {
   filterPanel.hidden = false;
+  mapShell.classList.add('filters-open');
   filterToggle.setAttribute('aria-expanded', 'true');
   window.setTimeout(() => searchInput.focus(), 0);
 }
 
 function closeFilters() {
   filterPanel.hidden = true;
+  mapShell.classList.remove('filters-open');
   filterToggle.setAttribute('aria-expanded', 'false');
   filterToggle.focus();
 }
@@ -387,9 +409,15 @@ stateFilter.addEventListener('change', () => {
 
 cityFilter.addEventListener('change', () => applyFilters());
 
+sinapirFilter.addEventListener('change', () => {
+  updateCityOptions();
+  applyFilters();
+});
+
 clearFilters.addEventListener('click', () => {
   searchInput.value = '';
   stateFilter.value = '';
+  sinapirFilter.checked = false;
   updateCityOptions();
   cityFilter.value = '';
   applyFilters();
@@ -397,6 +425,10 @@ clearFilters.addEventListener('click', () => {
 });
 
 document.addEventListener('fullscreenchange', () => {
+  const fullscreenButton = document.querySelector('.fullscreen-control');
+  const isMapFullscreen = document.fullscreenElement === mapShell;
+  fullscreenButton.textContent = isMapFullscreen ? '× Sair da tela cheia' : '⛶ Tela cheia';
+  fullscreenButton.setAttribute('aria-label', isMapFullscreen ? 'Sair da tela cheia' : 'Exibir mapa em tela cheia');
   window.setTimeout(() => map.invalidateSize(), 120);
 });
 
