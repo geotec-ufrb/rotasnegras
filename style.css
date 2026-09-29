@@ -604,7 +604,6 @@ h1 {
   box-shadow: 0 0 0 2px var(--color-navy-24);
 }
 
-.map-legend-swatch-default { background: var(--color-warm-black); }
 .map-legend-swatch-sinapir { background: var(--accent-primary); }
 
 .sinapir-marker-icon {
@@ -732,6 +731,11 @@ h1 {
 }
 
 .footer-bottom p { margin: 0; }
+.footer-legal { display: grid; gap: 5px; }
+.footer-bottom .sinapir-date-note {
+  color: var(--text-on-dark-muted);
+  font-size: 0.72rem;
+}
 .footer-bottom a { color: var(--accent-primary); font-weight: 700; text-decoration: none; }
 
 @media (max-width: 767px) {

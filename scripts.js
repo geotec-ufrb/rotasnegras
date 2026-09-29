@@ -56,12 +56,8 @@ legend.onAdd = function () {
   container.innerHTML = `
     <strong class="map-legend-title">Legenda</strong>
     <div class="map-legend-item">
-      <span class="map-legend-swatch map-legend-swatch-default" aria-hidden="true"></span>
-      <span>Roteiro mapeado</span>
-    </div>
-    <div class="map-legend-item">
       <span class="map-legend-swatch map-legend-swatch-sinapir" aria-hidden="true"></span>
-      <span><strong>SINAPIR</strong> — município aderente ao Sistema Nacional de Promoção da Igualdade Racial</span>
+      <span>Roteiros em municípios aderidos ao <strong>SINAPIR</strong> - Sistema Nacional de Promoção da Igualdade Racial *</span>
     </div>
   `;
   L.DomEvent.disableClickPropagation(container);
